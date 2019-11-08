@@ -1,0 +1,34 @@
+{
+  "auto_suggestion": {
+    "title": "Redis in Autosuggest",
+    "description": "",
+    "command": "",
+    "usedCommands": [],
+    "content": "patterns/auto_suggestion",
+    "type": "tutorial"
+  },
+  "analytics_system": {
+    "title": "Redis in an analytics system",
+    "description": "",
+    "command": "",
+    "usedCommands": [],
+    "content": "patterns/analytics_system",
+    "type": "tutorial"
+  },
+  "commenting_system": {
+    "title": "Redis in a Commenting System",
+    "description": "",
+    "command": "",
+    "usedCommands": [],
+    "content": "patterns/commenting_system",
+    "type": "tutorial"
+  },
+  "advertising_networks": {
+    "title": "Redis in Advertising Networks",
+    "description": "",
+    "command": "",
+    "usedCommands": [],
+    "content": "patterns/advertising_networks",
+    "type": "tutorial"
+  } 
+}
