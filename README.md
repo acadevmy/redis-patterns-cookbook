@@ -24,7 +24,7 @@ Thanks for your future contributions!
 &nbsp;
 
 ### 🚀 Redis Patterns Console (Angular SPA) 🚀
-You can try and go into the deep of[Redis](https://redis.io/)and its patterns with an interactive (and reactive) online console!  
+You can try and go into the deep of [Redis](https://redis.io/) and its patterns with an interactive (and reactive) online console!  
 Visit [https://acadevmy.github.io/redis-patterns-console](https://acadevmy.github.io/redis-patterns-console) and enjoy it!
 
 [_Redis Patterns Console_](https://acadevmy.github.io/redis-patterns-console) is an Angular SPA and an open-source project, so you can contribute if you wish.
