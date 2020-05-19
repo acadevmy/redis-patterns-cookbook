@@ -23,6 +23,7 @@ To query the table versus a given IP address, we can use the Redis command ZRANG
 >[ZRANGEBYSCORE ip-loc 1249717091 +inf LIMIT 0 1](#run) => "us:2"
 
 The first argument is our sorted set key, the second is the decimal representation of the IP address in decimal form the third (+inf) tells redis to not have a upper range ceiling and finally the last three arguments just indicate we want an offset 0 and only return one result.
+
 ---
 That wraps up the *Redis Pattern*. Please feel free to goof around with
 this console as much as you'd like.
