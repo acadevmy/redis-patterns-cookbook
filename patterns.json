@@ -63,4 +63,13 @@
     "content": "patterns/obj_storage", 
     "type": "tutorial"
   } 
+  ,
+  "hyper_log": {
+    "title": "HyperLogLog",
+    "description": "",
+    "command": "",
+    "usedCommands": [],
+    "content": "patterns/hyper_log", 
+    "type": "tutorial"
+  } 
 }
