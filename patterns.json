@@ -30,5 +30,13 @@
     "usedCommands": [],
     "content": "patterns/advertising_networks",
     "type": "tutorial"
+  },
+  "advertising_networks": {
+    "title": "Sorted Sets as Indexes",
+    "description": "",
+    "command": "",
+    "usedCommands": [],
+    "content": "patterns/sorted_indexes",
+    "type": "tutorial"
   } 
 }
