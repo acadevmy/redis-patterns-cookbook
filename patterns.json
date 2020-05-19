@@ -54,5 +54,13 @@
     "usedCommands": [],
     "content": "patterns/full_text_search",
     "type": "tutorial"
+  },
+  "obj_storage": {
+    "title": "Object hash storage",
+    "description": "",
+    "command": "",
+    "usedCommands": [],
+    "content": "patterns/obj_storage",
+    "type": "tutorial"
   } 
 }

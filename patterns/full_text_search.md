@@ -62,9 +62,9 @@ If you wanted an logical or search, you can substitute SUNION (set union) for SI
 Deleting an item from the index is a little more involved. First, we'll get the document index members from the document set (SMEMBERS) then remove the document IDs from the word indexes.
 
 > [SMEMBERS ex3](#run) =>
-    1) "have"
-    2) "cheetahs"
-    3) "spots"
+* "have"
+* "cheetahs"
+* "spots"
 
 > [SREM have ex3](#run)
 
