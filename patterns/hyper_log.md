@@ -7,9 +7,13 @@ HyperLogLog is similar to a Bloom filter internally as it runs items through a n
 There are three HyperLogLog commands in Redis: PFADD, PFCOUNT and PFMERGE. Let's say you're building a web crawler and you want to estimate the number of unique URLs the page has crawled during a given day. For every page you would run a command like this:
 
 > [PFADD crawled:20171124 "http://www.google.com/"](#run) => (integer) 1
+
 > [PFADD crawled:20171124 "http://www.redislabs.com/"](#run) => (integer) 1
+
 > [PFADD crawled:20171124 "http://www.redis.io/"](#run) => (integer) 1
+
 > [PFADD crawled:20171125 "http://www.redisearch.io/"](#run) => (integer) 1
+
 > [PFADD crawled:20171125 "http://www.redis.io/"](#run) => (integer) 1
 
 Each key above is indexed by day. To see how many pages were crawled on 2017-11-24, we would run the following command:
