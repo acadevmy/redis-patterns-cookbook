@@ -60,7 +60,7 @@
     "description": "",
     "command": "",
     "usedCommands": [],
-    "content": "patterns/obj_storage",
+    "content": "patterns/obj_storage", 
     "type": "tutorial"
   } 
 }
