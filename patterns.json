@@ -38,5 +38,13 @@
     "usedCommands": [],
     "content": "patterns/sorted_index",
     "type": "tutorial"
+  }, 
+  "ip_range": {
+    "title": "IP Range Indexing",
+    "description": "",
+    "command": "",
+    "usedCommands": [],
+    "content": "patterns/ip_range",
+    "type": "tutorial"
   } 
 }
