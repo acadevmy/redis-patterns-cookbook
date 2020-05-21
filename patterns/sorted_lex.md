@@ -10,7 +10,11 @@ Effectively, in this method we're storing everything at the same score (usually 
 
 > [ZADD lex-temperature 0 1511533207001:21](#run) => (integer) 1
 
-> [ZRANGE lex-temperature 0 -1](#run) => "1511533205001:21", "1511533206001:22", "1511533207001:21"
+> [ZRANGE lex-temperature 0 -1](#run) =>
+
+* 1511533205001:21
+* 1511533206001:22
+* 1511533207001:21
 
 
 In the three ZADD commands, the timestamp is separated from the value by a colon and we can see that each return a 1 indicating that all three were added. In the final command ZRANGE, we see the order is preserved. Why? In sorted sets when the score is equal, the the results with the same score are ordered by binary sorting. Since timestamps in our present time period all have the same number of digits, everything will be sorted nicely (if your timestamps go before the year 2002 or after 2285, you'll want to add padding digits).
@@ -19,17 +23,28 @@ While this doesn't rely on added uniqueness to prevent duplicates, it has a diff
 
 To get a range of values out of this type of time series model, you'll use the [ZRANGEBYLEX](#help) command. Let's say we want to get the temperatures after timestamp 1511533200001:
 
-> [ZRANGEBYLEX lex-temperature (1511533200001 +](#run) => "1511533205001:21" ,"1511533206001:22" ,"1511533207001:21"
+> [ZRANGEBYLEX lex-temperature (1511533200001 +](#run) =>
+
+* 1511533205001:21
+* 1511533206001:22
+* 1511533207001:21
 
 The second argument is prefixed with an open parenthesis to denote that it's exclusive of the actual value (inclusive is denoted with an open square bracket). In practice, the above format makes inclusive and exclusive irrelevant since the timestamp will always be followed by additional data. The third argument (+) indicates that we want no upper bound.
 
 Let's look at a counter-intuitive gotcha. Take this code where we try to get data between 1511533200001 and 1511533207001, inclusive:
 
-> [ZRANGEBYLEX lex-temperature [1511533200001 [1511533207001](#run) => "1511533205001:21", "1511533206001:22"
+> [ZRANGEBYLEX lex-temperature \[1511533200001 \[1511533207001](#run) =>
+
+* 1511533205001:21
+* 1511533206001:22
 
 Why was the data at timestamp 1511533207001 excluded despite adding in the inclusive prefix? It's very tempting to think that Redis somehow understands that this is a timestamp – but the truth is that Redis is naive to this – Redis just sees binary sorting. In binary sorting “1511533207001:21” is larger than “1511533207001” inclusively or exclusively. The correct way to be inclusive on the upper bounds is to go one millisecond up from the desired upper boundary and use the exclusive notation:
 
-> [ZRANGEBYLEX lex-temperature [1511533200001 (1511533207002](#run) => "1511533205001:21", "1511533206001:22", "1511533207001:21"
+> [ZRANGEBYLEX lex-temperature \[1511533200001 (1511533207002](#run) =>
+
+* 1511533205001:21
+* 1511533206001:22
+* 1511533207001:21
 
 ---
 
