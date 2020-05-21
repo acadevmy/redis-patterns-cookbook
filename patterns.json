@@ -62,14 +62,21 @@
     "usedCommands": [],
     "content": "patterns/obj_storage", 
     "type": "tutorial"
-  } 
-  ,
+  },
   "hyper_log": {
     "title": "HyperLogLog",
     "description": "",
     "command": "",
     "usedCommands": [],
     "content": "patterns/hyper_log", 
+    "type": "tutorial"
+  }, 
+  "sorted_lex": {
+    "title": "Lexicographic Sorted Set Time Series",
+    "description": "",
+    "command": "",
+    "usedCommands": [],
+    "content": "patterns/sorted_lex", 
     "type": "tutorial"
   } 
 }
